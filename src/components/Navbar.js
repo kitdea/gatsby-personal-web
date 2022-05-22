@@ -1,0 +1,35 @@
+import { Link, graphql, useStaticQuery  } from 'gatsby'
+import React from 'react'
+// import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+
+export default function Navbar() {
+  const data = useStaticQuery(graphql`
+    query siteInfo {
+      site {    
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+  
+  const { title } = data.site.siteMetadata
+
+  return (
+    <nav>
+     <h1>{ title }</h1>
+      <div className="links">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/projects">Projects</Link>
+        <Link to="/contact">Contact</Link>
+      </div>
+
+      <button className="hamburger hamburger--3dxy" type="button">
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
+        </span>
+      </button>
+    </nav>
+  )
+}

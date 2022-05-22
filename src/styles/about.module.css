@@ -1,0 +1,27 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 40px;
+  /* align-items: center; */
+}
+
+.about {
+  padding: 10px;
+  margin: 100px 0;
+}
+
+.about h2 {
+  font-size: 3em;
+  /* margin-top: 20px; */
+}
+
+.about img {
+  width: 100%;
+}
+
+@media(min-width: 768px){
+  .about {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
