@@ -6,9 +6,9 @@ import Img from "gatsby-plugin-image"
 
 export default function Home({ data }) {
 
+
 console.log(data)
 
-  
   return (
     <Layout>
     <section className={styles.header}>
